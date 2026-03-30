@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Design System – Fundação Lemann</title>
+<link href="assets/reset_a7024ff27614.css" rel="stylesheet"/>
+<link href="assets/theme_f2228085b204.css" rel="stylesheet"/>
+<link href="assets/header-footer_705ebf0b81ef.css" rel="stylesheet"/>
+<link href="assets/frontend_83e4218ca6ff.css" rel="stylesheet"/>
+<link href="assets/post-6_fe85f9c1e199.css" rel="stylesheet"/>
+<link href="assets/widget-image_b9ee8a96e425.css" rel="stylesheet"/>
+<link href="assets/widget-nav-menu_955fb5d923d2.css" rel="stylesheet"/>
+<link href="assets/widget-social-icons_4092d8d94776.css" rel="stylesheet"/>
+<link href="assets/fadeIn_2080d60d9e87.css" rel="stylesheet"/>
+<link href="assets/widget-mega-menu_a3e361e630ce.css" rel="stylesheet"/>
+<link href="assets/sticky_2372cb7ed404.css" rel="stylesheet"/>
+<link href="assets/widget-loop-grid_22f6e09989d4.css" rel="stylesheet"/>
+<link href="assets/widget-loop-carousel_f16517fdb610.css" rel="stylesheet"/>
+<link href="assets/widget-icon-box_8c9a96b2df5a.css" rel="stylesheet"/>
+<link href="assets/widget-divider_f04329180d27.css" rel="stylesheet"/>
+<link href="assets/widget-spacer_d07006c0278b.css" rel="stylesheet"/>
+<link href="assets/widget-text-editor_f6354af049c1.css" rel="stylesheet"/>
+<link href="assets/widget-icon-list_81ce662b4bec.css" rel="stylesheet"/>
+<link href="assets/post-823_6692d15b2614.css" rel="stylesheet"/>
+<style>
+/* ── Scrollbar ── */
+::-webkit-scrollbar{width:10px}
+::-webkit-scrollbar-thumb{background:linear-gradient(180deg,#052B47 -2.98%,#0C436B 99.43%);border-radius:100px}
+::-webkit-scrollbar-track{background:#ececec}
+
+/* ── Fundacao button ── */
+#fundacao-button .elementor-button{--tamanho-circulo:16px;--background-circulo:#052B47;--tamanho-icone:12px;--espaco-icone-texto:8px}
+#fundacao-button .elementor-button-icon{position:relative;overflow:hidden;width:var(--tamanho-circulo);height:var(--tamanho-circulo);display:flex;align-items:center;justify-content:center;transition:.3s all cubic-bezier(.59,.07,.27,.94)}
+#fundacao-button .elementor-button-icon *{font-size:var(--tamanho-icone);z-index:2;position:relative;margin:0!important;height:unset}
+#fundacao-button .elementor-button-icon i,#fundacao-button .elementor-button-icon svg{transform:translateX(-150%);transition:.3s all cubic-bezier(.59,.07,.27,.94)}
+#fundacao-button .elementor-button-icon::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:var(--background-circulo);width:var(--tamanho-circulo);height:var(--tamanho-circulo);z-index:0;border-radius:50%;transition:.3s all cubic-bezier(.59,.07,.27,.94)}
+#fundacao-button .elementor-button:hover .elementor-button-icon::before{transform:translateX(100%) translateY(-50%)}
+#fundacao-button .elementor-button:hover .elementor-button-icon i,#fundacao-button .elementor-button:hover .elementor-button-icon svg{transform:translateX(0%)}
+#fundacao-button .elementor-button-content-wrapper{display:flex;align-items:center;gap:var(--espaco-icone-texto)}
+
+/* ── .fl-underline ── */
+.fl-underline{background:linear-gradient(transparent 70%,#B2C530 70%);padding:0 5px;font-weight:500!important;font-style:italic!important}
+
+/* ── mark ── */
+mark{background-color:#DA7680;padding:5px 10px}
+
+/* ── DS nav bar ── */
+#ds-nav{position:sticky;top:0;z-index:9999;background:#052B47;display:flex;align-items:center;gap:0;overflow-x:auto;padding:0;white-space:nowrap}
+#ds-nav a{color:#B2C530;text-decoration:none;font-family:"Cabin",sans-serif;font-size:.78em;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:12px 18px;display:inline-block;transition:background .2s,color .2s}
+#ds-nav a:hover{background:#0C436B;color:#fff}
+#ds-nav .ds-brand{color:#fff;font-family:"Montserrat",sans-serif;font-weight:800;font-size:.85em;padding:12px 20px;border-right:1px solid rgba(255,255,255,.15);flex-shrink:0}
+
+/* ── DS section wrappers ── */
+.ds-section{padding:80px 0;border-bottom:1px solid rgba(5,43,71,.08)}
+.ds-section:nth-child(even){background:#f5f7fa}
+.ds-inner{max-width:1200px;margin:0 auto;padding:0 40px}
+.ds-section-label{font-family:"Cabin",sans-serif;font-size:.7em;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#00A180;margin-bottom:8px}
+.ds-section-title{font-family:"Montserrat",sans-serif;font-size:1.6em;font-weight:800;color:#052B47;margin-bottom:12px}
+.ds-section-desc{font-family:"Cabin",sans-serif;color:#0C436B;font-size:.95em;line-height:1.6;margin-bottom:48px;max-width:640px}
+.ds-divider{width:48px;height:3px;background:#B2C530;margin-bottom:32px}
+
+/* ── Typography table ── */
+.type-table{width:100%;border-collapse:collapse}
+.type-table tr{border-bottom:1px solid rgba(5,43,71,.08)}
+.type-table td{padding:20px 0;vertical-align:middle}
+.type-table .type-meta{font-family:"Cabin",sans-serif;font-size:.78em;color:#6b8399;text-align:right;white-space:nowrap;padding-left:24px;min-width:120px}
+.type-table .type-name{font-family:"Cabin",sans-serif;font-size:.75em;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#00A180;padding-right:24px;min-width:120px;white-space:nowrap}
+
+/* ── Color swatches ── */
+.swatch-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:16px}
+.swatch{border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.swatch-color{height:80px}
+.swatch-info{padding:12px;background:#fff;font-family:"Cabin",sans-serif}
+.swatch-name{font-weight:700;font-size:.8em;color:#052B47}
+.swatch-hex{font-size:.75em;color:#6b8399;margin-top:2px}
+
+/* ── Component demos ── */
+.component-row{display:flex;flex-wrap:wrap;align-items:flex-start;gap:24px;margin-bottom:48px}
+.component-label{font-family:"Cabin",sans-serif;font-size:.72em;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#6b8399;margin-bottom:8px}
+
+/* ── Cards demo ── */
+.card-hover4{transition:transform .2s,box-shadow .2s}
+.card-hover4:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(5,43,71,.15)}
+
+/* ── Motion gallery ── */
+.motion-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:24px}
+.motion-item{background:#fff;border:1px solid rgba(5,43,71,.08);border-radius:12px;padding:32px 20px;text-align:center;font-family:"Cabin",sans-serif;font-size:.85em;color:#052B47;display:flex;flex-direction:column;align-items:center;gap:16px}
+.motion-item .demo-box{width:60px;height:60px;background:linear-gradient(135deg,#00A180,#B2C530);border-radius:8px}
+.motion-item-label{font-weight:700;font-size:.75em;letter-spacing:.08em;text-transform:uppercase;color:#0C436B}
+
+/* ── Layout demos ── */
+.layout-demo{border:2px dashed rgba(5,43,71,.15);border-radius:8px;overflow:hidden;margin-bottom:24px}
+.layout-demo-label{font-family:"Cabin",sans-serif;font-size:.72em;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#6b8399;margin-bottom:8px}
+
+/* ── Icon grid ── */
+.icon-grid{display:flex;flex-wrap:wrap;gap:24px}
+.icon-item{display:flex;flex-direction:column;align-items:center;gap:8px;font-family:"Cabin",sans-serif;font-size:.75em;color:#052B47}
+.icon-item svg{width:48px;height:48px}
+
+/* ── Page background ── */
+body{background:#fff}
+</style>
+</head>
+<body class="wp-theme-hello-elementor elementor-default">
+
+<!-- ████ TOP NAV ████ -->
+<nav id="ds-nav" aria-label="Design System navigation">
+  <span class="ds-brand">FL · Design System</span>
+  <a href="#sec-hero">0&nbsp;Hero</a>
+  <a href="#sec-typography">1&nbsp;Typography</a>
+  <a href="#sec-colors">2&nbsp;Colors</a>
+  <a href="#sec-components">3&nbsp;Components</a>
+  <a href="#sec-layout">4&nbsp;Layout</a>
+  <a href="#sec-motion">5&nbsp;Motion</a>
+  <a href="#sec-icons">6&nbsp;Icons</a>
+</nav>
+
+<!-- ████ 0 · HERO ████ -->
+<section id="sec-hero">
+  <div class="elementor elementor-823">
+    <div class="elementor-element elementor-element-9b56b59 e-con-full e-flex e-con e-parent" style="">
+      <div style="position:relative;min-height:600px;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:70px;background-image:url('assets/Captura-de-tela-2026-02-19-153_6898eb4e9684.png');background-size:cover;background-position:center center;overflow:hidden">
+        <div style="position:absolute;inset:0;background-image:url('assets/test-gradient-fl-03-50_b32871a12985.webp');background-size:84% auto;background-position:center left;background-repeat:no-repeat;pointer-events:none"></div>
+        <div style="position:absolute;inset:0;background:rgba(5,43,71,.55)"></div>
+        <div class="e-con-inner" style="position:relative;z-index:2;max-width:1200px;margin:0 auto;width:100%;padding:0 32px">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end">
+            <div style="display:flex;flex-direction:column;gap:20px">
+              <div class="elementor-element elementor-element-26b2caa elementor-widget elementor-widget-text-editor" style="font-family:'Montserrat',Sans-serif;font-size:2em;font-weight:700;line-height:1.6em;color:#fff">
+                Sistema Visual da Fundação Lemann: componentes, padrões e identidade
+              </div>
+              <div id="fundacao-button" class="elementor-element elementor-widget elementor-widget-button">
+                <a class="elementor-button elementor-button-link elementor-size-sm" href="#sec-typography" style="background-color:#B2C530;color:#052B47;border:1px solid #052B47;border-radius:8px;text-decoration:none">
+                  <span class="elementor-button-content-wrapper">
+                    <span class="elementor-button-icon">
+                      <svg aria-hidden="true" class="e-font-icon-svg e-far-arrow-alt-circle-right" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm72 20v-40c0-6.6 5.4-12 12-12h116v-67c0-10.7 12.9-16 20.5-8.5l99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-7.6 7.6-20.5 2.2-20.5-8.5v-67H140c-6.6 0-12-5.4-12-12z"/></svg>
+                    </span>
+                    <span class="elementor-button-text">Explorar sistema</span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ████ 1 · TYPOGRAPHY ████ -->
+<section id="sec-typography" class="ds-section">
+  <div class="ds-inner">
+    <div class="ds-section-label">01</div>
+    <h2 class="ds-section-title">Typography</h2>
+    <div class="ds-divider"></div>
+    <p class="ds-section-desc">Hierarquia tipográfica extraída diretamente do CSS do site. Fontes: Montserrat (títulos) e Cabin (corpo).</p>
+    <table class="type-table">
+      <tbody>
+        <tr>
+          <td class="type-name">Heading 1</td>
+          <td><h1 style="font-family:'Montserrat',sans-serif;font-size:2em;font-weight:700;line-height:1.6em;color:#052B47;margin:0">Por um Brasil que acredita nas pessoas.</h1></td>
+          <td class="type-meta">Montserrat 700</td>
+        </tr>
+        <tr>
+          <td class="type-name">Heading 2</td>
+          <td><h2 style="font-family:'Montserrat',sans-serif;font-size:1.5em;font-weight:700;color:#052B47;line-height:1.5;margin:0">Parcerias de impacto que transformam o Brasil.</h2></td>
+          <td class="type-meta">Montserrat 700</td>
+        </tr>
+        <tr>
+          <td class="type-name">Body Text</td>
+          <td><p style="font-family:'Cabin',sans-serif;font-size:1em;font-weight:400;color:#011B2E;line-height:1.6;margin:0">A Fundação Lemann atua pela educação de qualidade para todas as crianças.</p></td>
+          <td class="type-meta">Cabin 400</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ████ 2 · COLORS ████ -->
+<section id="sec-colors" class="ds-section">
+  <div class="ds-inner">
+    <div class="ds-section-label">02</div>
+    <h2 class="ds-section-title">Colors</h2>
+    <div class="ds-divider"></div>
+    <div class="swatch-grid">
+      <div class="swatch"><div class="swatch-color" style="background:#052B47"></div><div class="swatch-info"><div class="swatch-name">Navy Primary</div><div class="swatch-hex">#052B47</div></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:#B2C530"></div><div class="swatch-info"><div class="swatch-name">Lime Accent</div><div class="swatch-hex">#B2C530</div></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:#00A180"></div><div class="swatch-info"><div class="swatch-name">Teal Secondary</div><div class="swatch-hex">#00A180</div></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:#DA7680"></div><div class="swatch-info"><div class="swatch-name">Pink Mark</div><div class="swatch-hex">#DA7680</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ████ 3 · COMPONENTS ████ -->
+<section id="sec-components" class="ds-section">
+  <div class="ds-inner">
+    <div class="ds-section-label">03</div>
+    <h2 class="ds-section-title">Components</h2>
+    <div class="ds-divider"></div>
+    <h3 class="component-label">Buttons</h3>
+    <div class="component-row">
+      <div id="fundacao-button">
+        <a class="elementor-button elementor-button-link elementor-size-sm" style="background-color:#B2C530;color:#052B47;border:1px solid #052B47;border-radius:8px;text-decoration:none;display:inline-flex">
+          <span class="elementor-button-content-wrapper">
+            <span class="elementor-button-icon">
+              <svg aria-hidden="true" class="e-font-icon-svg e-far-arrow-alt-circle-right" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm72 20v-40c0-6.6 5.4-12 12-12h116v-67c0-10.7 12.9-16 20.5-8.5l99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-7.6 7.6-20.5 2.2-20.5-8.5v-67H140c-6.6 0-12-5.4-12-12z"/></svg>
+            </span>
+            <span class="elementor-button-text">Saiba mais</span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ████ 4 · LAYOUT ████ -->
+<section id="sec-layout" class="ds-section">
+  <div class="ds-inner">
+    <div class="ds-section-label">04</div>
+    <h2 class="ds-section-title">Layout</h2>
+    <div class="ds-divider"></div>
+    <div class="layout-demo">
+      <div style="background:#052B47;min-height:100px;display:grid;grid-template-columns:1fr 1fr;gap:24px;padding:20px">
+        <div style="border:1px dashed #B2C530;color:#fff;padding:10px;text-align:center">Col 1</div>
+        <div style="border:1px dashed #00A180;color:#fff;padding:10px;text-align:center">Col 2</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ████ 5 · MOTION ████ -->
+<section id="sec-motion" class="ds-section">
+  <div class="ds-inner">
+    <div class="ds-section-label">05</div>
+    <h2 class="ds-section-title">Motion</h2>
+    <div class="ds-divider"></div>
+    <div class="motion-grid">
+      <div class="motion-item">
+        <div class="demo-box" style="animation:fadeIn 1s ease forwards"></div>
+        <span class="motion-item-label">fadeIn</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ████ 6 · ICONS ████ -->
+<section id="sec-icons" class="ds-section">
+  <div class="ds-inner">
+    <div class="ds-section-label">06</div>
+    <h2 class="ds-section-title">Icons</h2>
+    <div class="ds-divider"></div>
+    <div class="icon-grid">
+      <div class="icon-item">
+        <svg viewBox="0 0 155 155" xmlns="http://www.w3.org/2000/svg" style="width:48px;height:48px"><circle cx="77.5" cy="77.5" r="75" fill="none" stroke="#b2c530" stroke-width="5"/></svg>
+        <span>Brand Icon</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
