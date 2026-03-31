@@ -2,9 +2,9 @@
 
 Este é o protótipo de alta fidelidade do **Oráculo**, um copiloto executivo desenvolvido para a **Fundação Lemann**. A aplicação utiliza Streamlit com injeção de CSS customizado baseado no design system oficial da marca.
 
-![Preview](screencapture-localhost-8501-2026-03-30-13_51_30.png)
+![Preview](assets/screencapture-localhost-8501-2026-03-30-13_51_30.png)
 
-![Preview](screencapture-localhost-8501-2026-03-30-13_50_59.png)
+![Preview](assets/screencapture-localhost-8501-2026-03-30-13_50_59.png)
 
 ## Como Executar
 
